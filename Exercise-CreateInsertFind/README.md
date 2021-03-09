@@ -62,8 +62,15 @@ db.students.find({rowNumber: 1});
 
 ---
 
+## __Task 4:__ Find an entry for myself.
 
-  * An entry for a single person.
+### __Answer:__
+```bash
+db.students.find({name: 'Richard'});
+```
+
+---
+
 
   * The entries for all the Mac users in your row.
 
