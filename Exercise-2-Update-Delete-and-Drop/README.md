@@ -33,6 +33,8 @@ db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basketweaving"}}
 
 💡 __Syntax:__ `db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})`
 
+🏆 __Answer:__
+
 ```bash
 db.students.update({name: 'Richard'}, {$set: {os: 'Red Hat Linux'}});
 
@@ -46,6 +48,8 @@ db.students.update({name: 'Richard'}, {$set: {os: 'Red Hat Linux'}});
 
 💡 __Syntax:__ `db.students.remove({name: [name of another neighbor]})`
 
+🏆 __Answer:__
+
 ```bash
 db.students.remove({name: 'Linus'});
 
@@ -57,6 +61,8 @@ db.students.remove({name: 'Linus'});
 
 #### Task 4. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
 
+🏆 __Answer:__
+
 ```bash
 db.students.update({}, {$set: {gavecandy:false}}, {multi:true});
 
@@ -67,6 +73,12 @@ db.students.update({}, {$set: {gavecandy:false}}, {multi:true});
 ---
 
 #### Task 5. All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
+
+🏆 __Answer:__
+
+```bash
+db.students.update({name:'Steve'}, {$set: {gavecandy:true}});
+```
 
 ---
 
