@@ -135,11 +135,31 @@ db.places.remove({"country": "Morocco"});
 
 ---
 
-###### 12. Deleting the entire collecton.
+###### 12. Emptying the entire collecton.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].remove()`
 
 
 ```bash
 db.places.remove({});
+```
+
+---
+
+###### 13. Deleting the entire collection.
+
+💡 __Syntax:__ `db.[COLLECTION_NAME].drop()`
+
+```bash
+db.places.drop();
+```
+
+---
+
+###### 14. Deleting the entire database.
+
+💡 __Syntax:__ `db.dropDatabase()`
+
+```bash
+db.dropDatabase();
 ```
