@@ -21,7 +21,7 @@ use classroom;
 🏆 __Answer:__
 
 ```bash
-db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basketweaving"}})
+db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basketweaving"}});
 
 # Output:
 # WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
@@ -36,13 +36,22 @@ db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basketweaving"}}
 ```bash
 db.students.update({name: 'Richard'}, {$set: {os: 'Red Hat Linux'}});
 
-# Output
+# Output:
 # WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 
 ---
 
 #### Task 3. Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
+
+💡 __Syntax:__ `db.students.remove({name: [name of another neighbor]})`
+
+```bash
+db.students.remove({name: 'Linus'});
+
+# Output:
+# WriteResult({ "nRemoved" : 1 })
+```
 
 ---
 
