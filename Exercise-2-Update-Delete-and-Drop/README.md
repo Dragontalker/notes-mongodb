@@ -130,8 +130,7 @@ db.students.find(
 
 # Output:
 # { "_id" : ObjectId("60478795164d739d58fbe94d"), "name" : "Richard", "rowNumber" : 1, "os" : "Red Hat Linux", "hobbies" : [ "Vide Gaming", "Hiking", "Reading" ], "gavecandy" : false }
-# { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming", "Extreme Basketweaving" ], "gavecandy" : 
-true }
+# { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming", "Extreme Basketweaving" ], "gavecandy" : true }
 # { "_id" : ObjectId("6047bba838586d29b401ef0c"), "name" : "Alexa", "row" : 3, "os" : "Lin", "hobbies" : [ "Gaming", "Reading", "Gardening" ] }
 # { "_id" : ObjectId("6047bba838586d29b401ef0d"), "name" : "Gary", "row" : 4, "os" : "Mac", "hobbies" : [ "Walking", "Reading", "Mountain Climbing" ] }
 ```
