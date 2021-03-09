@@ -50,6 +50,8 @@ db.places.find();
 
 ## 5. Adding .pretty() makes the data more readable:
 
+💡 __Syntax:__ `db.[COLLECTION_NAME].find().pretty()`
+
 ```bash
 db.places.find().pretty();
 ```
