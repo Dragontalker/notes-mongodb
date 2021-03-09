@@ -1,4 +1,4 @@
-# Exercise: Creating, Inserting and Finding in MongoDB
+# Exercise 1: Creating, Inserting and Finding in MongoDB
 
 ## 💡 Hint(s)
 
