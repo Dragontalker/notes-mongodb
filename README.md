@@ -2,7 +2,7 @@
 
 ## 1. Start up a new database by switching to it.
 
-```sql
+```bash
 use lessondb
 ```
 
@@ -10,7 +10,7 @@ use lessondb
 
 ## 2. Show the current db by running db:
 
-```sql
+```bash
 db
 ```
 
@@ -22,8 +22,8 @@ db
 
 * ALSO, TAKE NOTE: the contents of the insert are basically a JS object, and include an array:
 
-```sql
-db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+```bash
+db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]});
 ```
 
 ---
@@ -34,25 +34,25 @@ db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["C
 
 * This id is specific for each doc in the collection:
 
-```sql
-db.places.find()
+```bash
+db.places.find();
 ```
 
 ---
 
 ## 5. Adding .pretty() makes the data more readable:
 
-```sql
-db.places.find().pretty()
+```bash
+db.places.find().pretty();
 ```
 
 ---
 
 ## 6. Find specific data by matching a field:
 
-```sql
-db.places.find({"continent": "Africa"}).pretty()
-db.places.find({"country": "Morocco"}).pretty()
+```bash
+db.places.find({"continent": "Africa"}).pretty();
+db.places.find({"country": "Morocco"}).pretty();
 ```
 
 ---
@@ -61,6 +61,15 @@ db.places.find({"country": "Morocco"}).pretty()
 
 * Use `db.places.find({_id:[COPY AN OBJECTID FROM THE PREVIOUS FIND RESULTS]})`
 
-```sql
-db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})
+```bash
+db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 ```
+
+## 8. Updating
+
+* We update data using `db.[COLLECTION_NAME].update()`
+
+```bash
+db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
+```
+
