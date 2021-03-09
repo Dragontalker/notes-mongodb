@@ -106,13 +106,13 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {m
 * Recall from the earlier demo the structure of our document:
 
 ```bash
-db.places.insert({"continent": "Africa", "country": "Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+db.places.insert({"continent": "Africa", "country": "Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]});
 ```
 
 * What do you think will happen when you run the following command, even though there is not a `capital` field in the document?
 
 ```bash
-db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}});
 ```
 
 * `$set` will create the field `capital`.
@@ -120,8 +120,26 @@ db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
 * The newly created field can now be updated with the same command:
 
 ```bash
-db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
+db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}});
 ```
 
 ----
 
+###### 11. Deleting.
+
+💡 __Syntax:__ `db.[COLLECTION_NAME].remove({KEY: VALUE})`
+
+```bash
+db.places.remove({"country": "Morocco"});
+```
+
+---
+
+###### 12. Deleting the entire collecton.
+
+💡 __Syntax:__ `db.[COLLECTION_NAME].remove()`
+
+
+```bash
+db.places.remove({});
+```
