@@ -60,9 +60,11 @@ db.places.find().pretty();
 
 ## 6. Find specific data by matching a field:
 
+💡 __Syntax:__ `db.[COLLECTION_NAME].find({KEY: VALUE})`
+
 ```bash
-db.places.find({"continent": "Africa"}).pretty();
-db.places.find({"country": "Morocco"}).pretty();
+db.places.find({"continent": "Africa"});
+db.places.find({"country": "Morocco"});
 ```
 
 ---
