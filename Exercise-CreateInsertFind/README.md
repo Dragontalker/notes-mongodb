@@ -71,8 +71,15 @@ db.students.find({name: 'Richard'});
 
 ---
 
+## __Task 5:__ Find the entries for all the Mac users in your row.
 
-  * The entries for all the Mac users in your row.
+### __Answer:__
+```bash
+db.students.find({rowNumber: 1, os: 'Mac'});
+```
+
+---
+
 
 
 
