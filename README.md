@@ -81,7 +81,7 @@ db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 
 ## 8. Updating
 
-* We update data using `db.[COLLECTION_NAME].update()`
+💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}})`
 
 ```bash
 db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
