@@ -1,6 +1,6 @@
-# MongoDB Cheat Sheet
+### MongoDB Cheat Sheet
 
-## 1. Start up a new database by switching to it.
+###### 1. Start up a new database by switching to it.
 
 💡 __Syntax:__ `use db_name` 
 
@@ -10,7 +10,7 @@ use lessondb;
 
 ---
 
-## 2. Show the current db by running db:
+###### 2. Show the current db by running db:
 
 💡 __Syntax:__ `db_name`
 
@@ -20,7 +20,7 @@ db;
 
 ---
 
-## 3. Insert data into the lessondb database with this command.
+###### 3. Insert data into the lessondb database with this command.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].insert({KEY: VALUE})`
 
@@ -34,7 +34,7 @@ db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["C
 
 ---
 
-## 4. Find all data in a Collection.
+###### 4. Find all data in a Collection.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].find()`
 
@@ -48,7 +48,7 @@ db.places.find();
 
 ---
 
-## 5. Adding .pretty() makes the data more readable:
+###### 5. Adding .pretty() makes the data more readable:
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].find().pretty()`
 
@@ -58,7 +58,7 @@ db.places.find().pretty();
 
 ---
 
-## 6. Find specific data by matching a field:
+###### 6. Find specific data by matching a field:
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].find({KEY: VALUE})`
 
@@ -69,7 +69,7 @@ db.places.find({"country": "Morocco"});
 
 ---
 
-## 7. Find specific data by matching an _id:
+###### 7. Find specific data by matching an _id:
 
 💡 __Syntax:__ `db.places.find({_id:[ID FROM PREVIOUS RESULT]})`
 
@@ -79,7 +79,7 @@ db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 
 ---
 
-## 8. Updating using `$set`.
+###### 8. Updating using `$set`.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}})`
 
@@ -91,7 +91,7 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
 
 ---
 
-## 9. Updating more than one entries using `{multi: true}`.
+## 9. Updating more than one entries.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}}, {multi: true})`
 
