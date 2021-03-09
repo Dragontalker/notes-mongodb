@@ -80,9 +80,9 @@ db.students.find({rowNumber: 1, os: 'Mac'});
 
 ---
 
+## __Bonus Task:__ Find users by an entry in an array. 
 
-
-
-## 🏆 Bonus 
-
-* If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
+### 🏆 __Answer:__
+```bash
+db.students.find({'hobbies': {$in: ['Coding']}});
+```
