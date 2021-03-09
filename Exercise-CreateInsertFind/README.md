@@ -1,15 +1,15 @@
-# Creating, Inserting and Finding in MongoDB
+# Exercise: Creating, Inserting and Finding in MongoDB
 
-## Instructions
+## __Task 1:__ Use the command line to create a classroom database. 
 
-### _Task 1:_ Use the command line to create a classroom database. 
-
-#### __Answer:__
+### __Answer:__
 ```bash
 use classroom
 ```
 
-### __Task 2:__ Insert entries for yourself and the people in your row in a `students` collection.
+---
+
+## __Task 2:__ Insert entries for yourself and the people in your row in a `students` collection.
 
 * Each document should have:
 
@@ -21,7 +21,7 @@ use classroom
 
   * A field of `hobbies` with an array of the hobbies the person likes to do.
 
-#### __Answer:__
+### __Answer:__
 ```bash
 db.students.insert({
   name: 'Steve', 
@@ -30,6 +30,9 @@ db.students.insert({
   hobbies:['Coding', 'Reading', 'Running'] 
 })
 ```
+
+---
+
 
 * Use find commands to get:
 
