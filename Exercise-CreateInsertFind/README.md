@@ -17,7 +17,7 @@ use classroom
 
   * A field of `name` with the person's name.
 
-  * A field of `rownumber` which will contain the row number that they are in.
+  * A field of `rowNumber` which will contain the row number that they are in.
 
   * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
 
@@ -27,21 +27,21 @@ use classroom
 ```bash
 db.students.insert({
   name: 'Richard', 
-  row:1, 
+  rowNumber: 1, 
   os:'Windows', 
   hobbies:['Video Gaming', 'Hiking', 'Reading'] 
 });
 
 db.students.insert({
   name: 'Linus', 
-  row:2, 
+  rowNumber: 2, 
   os:'Ubuntu', 
   hobbies:['Coding', 'Reading', 'Running'] 
 });
 
 db.students.insert({
   name: 'Steve', 
-  row:1, 
+  rowNumber: 1, 
   os:'Mac', 
   hobbies:['Designing', 'Reading', 'Swimming'] 
 });
