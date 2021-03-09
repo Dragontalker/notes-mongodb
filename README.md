@@ -71,7 +71,7 @@ db.places.find({"country": "Morocco"});
 
 ## 7. Find specific data by matching an _id:
 
-* Use `db.places.find({_id:[COPY AN OBJECTID FROM THE PREVIOUS FIND RESULTS]})`
+💡 __Syntax:__ `db.places.find({_id:[ID FROM PREVIOUS RESULT]})`
 
 ```bash
 db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
