@@ -78,6 +78,9 @@ db.students.update({}, {$set: {gavecandy:false}}, {multi:true});
 
 ```bash
 db.students.update({name:'Steve'}, {$set: {gavecandy:true}});
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 
 ---
