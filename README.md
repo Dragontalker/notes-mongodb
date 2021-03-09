@@ -15,14 +15,14 @@ use lessondb;
 💡 __Syntax:__ `db_name`
 
 ```bash
-db
+db;
 ```
 
 ---
 
 ## 3. Insert data into the lessondb database with this command.
 
-💡 __Syntax:__ `db.[COLLECTION_NAME].insert({key: value})`
+💡 __Syntax:__ `db.[COLLECTION_NAME].insert({KEY: VALUE})`
 
 * NOTE: This will create the collection automatically.
 
