@@ -6,16 +6,16 @@
 
 ---
 
-## __Task 1:__ Use the command line to create a classroom database. 
+#### __Task 1:__ Use the command line to create a classroom database. 
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 use classroom;
 ```
 
 ---
 
-## __Task 2:__ Insert entries for yourself and the people in your row in a `students` collection.
+#### __Task 2:__ Insert entries for yourself and the people in your row in a `students` collection.
 
 * Each document should have:
 
@@ -27,7 +27,7 @@ use classroom;
 
   * A field of `hobbies` with an array of the hobbies the person likes to do.
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 db.students.insert({
   name: 'Richard', 
@@ -62,9 +62,9 @@ db.students.insert({
 
 ---
 
-## __Task 3:__  Find a list of everyone in your row.
+#### __Task 3:__  Find a list of everyone in your row.
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 db.students.find({rowNumber: 1});
 
@@ -75,9 +75,9 @@ db.students.find({rowNumber: 1});
 
 ---
 
-## __Task 4:__ Find an entry for myself.
+#### __Task 4:__ Find an entry for myself.
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 db.students.find({name: 'Richard'});
 
@@ -87,9 +87,9 @@ db.students.find({name: 'Richard'});
 
 ---
 
-## __Task 5:__ Find the entries for all the Mac users in your row.
+#### __Task 5:__ Find the entries for all the Mac users in your row.
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 db.students.find({rowNumber: 1, os: 'Mac'});
 
@@ -99,9 +99,9 @@ db.students.find({rowNumber: 1, os: 'Mac'});
 
 ---
 
-## __Bonus Task:__ Find users by an entry in an array. 
+#### __Bonus Task:__ Find users by an entry in an array. 
 
-### 🏆 __Answer:__
+##### 🏆 __Answer:__
 ```bash
 db.students.find({'hobbies': {$in: ['Coding']}});
 
