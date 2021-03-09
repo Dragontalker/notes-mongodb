@@ -1,12 +1,16 @@
 # Exercise: Creating, Inserting and Finding in MongoDB
 
+## 💡 Hint(s)
+
+* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+
 ---
 
 ## __Task 1:__ Use the command line to create a classroom database. 
 
 ### __Answer:__
 ```bash
-use classroom
+use classroom;
 ```
 
 ---
@@ -49,18 +53,21 @@ db.students.insert({
 
 ---
 
+## __Task 3:__  Find a list of everyone in your row.
 
-* Use find commands to get:
+### __Answer:__
+```bash
+db.students.find({rowNumber: 1});
+```
 
-  * A list of everyone in your row.
+---
+
 
   * An entry for a single person.
 
   * The entries for all the Mac users in your row.
 
-## 💡 Hint(s)
 
-* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
 
 ## 🏆 Bonus 
 
