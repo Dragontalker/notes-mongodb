@@ -44,6 +44,9 @@ db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["C
 
 ```bash
 db.places.find();
+
+# Outputs:
+# { "_id" : ObjectId("60466cab4ec1fa1fa1f43df8"), "continent" : "Africa", "country" : "Morocco", "majorcities" : [ "Casablanca", "Fez", "Marrakech" ] }
 ```
 
 ---
@@ -54,6 +57,18 @@ db.places.find();
 
 ```bash
 db.places.find().pretty();
+
+# Output:
+# {
+#        "_id" : ObjectId("60466cab4ec1fa1fa1f43df8"),
+#        "continent" : "Africa",
+#        "country" : "Morocco",
+#        "majorcities" : [
+#                "Casablanca",
+#                "Fez",
+#                "Marrakech"
+#        ]
+# }
 ```
 
 ---
@@ -64,7 +79,14 @@ db.places.find().pretty();
 
 ```bash
 db.places.find({"continent": "Africa"});
+
+# Output:
+# { "_id" : ObjectId("60466cab4ec1fa1fa1f43df8"), "continent" : "Africa", "country" : "Morocco", "majorcities" : [ "Casablanca", "Fez", "Marrakech" ] }
+
 db.places.find({"country": "Morocco"});
+
+# Output:
+# { "_id" : ObjectId("60466cab4ec1fa1fa1f43df8"), "continent" : "Africa", "country" : "Morocco", "majorcities" : [ "Casablanca", "Fez", "Marrakech" ] }
 ```
 
 ---
@@ -74,7 +96,10 @@ db.places.find({"country": "Morocco"});
 💡 __Syntax:__ `db.places.find({_id:[ID FROM PREVIOUS RESULT]})`
 
 ```bash
-db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
+db.places.find({_id: ObjectId("60466cab4ec1fa1fa1f43df8")});
+
+# Output:
+# { "_id" : ObjectId("60466cab4ec1fa1fa1f43df8"), "continent" : "Africa", "country" : "Morocco", "majorcities" : [ "Casablanca", "Fez", "Marrakech" ] }
 ```
 
 ---
@@ -87,6 +112,9 @@ db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 
 ```bash
 db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 
 ---
@@ -97,22 +125,22 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
 
 ```bash
 db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
 ```
 
 ---
 
 ###### 10. Adding new KEY pairs using `$set`.
 
-* Recall from the earlier demo the structure of our document:
-
-```bash
-db.places.insert({"continent": "Africa", "country": "Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]});
-```
-
 * What do you think will happen when you run the following command, even though there is not a `capital` field in the document?
 
 ```bash
 db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}});
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 
 * `$set` will create the field `capital`.
@@ -121,6 +149,9 @@ db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}});
 
 ```bash
 db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}});
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 
 ----
@@ -131,6 +162,9 @@ db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}});
 
 ```bash
 db.places.remove({"country": "Morocco"});
+
+# Output:
+# WriteResult({ "nRemoved" : 1 })
 ```
 
 ---
@@ -142,6 +176,9 @@ db.places.remove({"country": "Morocco"});
 
 ```bash
 db.places.remove({});
+
+# Output: 
+# WriteResult({ "nRemoved" : 0 })
 ```
 
 ---
@@ -152,6 +189,9 @@ db.places.remove({});
 
 ```bash
 db.places.drop();
+
+# Output:
+# true
 ```
 
 ---
@@ -162,4 +202,7 @@ db.places.drop();
 
 ```bash
 db.dropDatabase();
+
+# Output:
+# { "dropped" : "lessondb", "ok" : 1 }
 ```
