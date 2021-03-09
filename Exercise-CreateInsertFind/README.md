@@ -4,12 +4,12 @@
 
 ### _Task 1:_ Use the command line to create a classroom database. 
 
-* __Answer:__
+#### __Answer:__
 ```bash
 use classroom
 ```
 
-* Insert entries for yourself and the people in your row in a `students` collection.
+### __Task 2:__ Insert entries for yourself and the people in your row in a `students` collection.
 
 * Each document should have:
 
@@ -20,6 +20,16 @@ use classroom
   * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
 
   * A field of `hobbies` with an array of the hobbies the person likes to do.
+
+#### __Answer:__
+```bash
+db.students.insert({
+  name: 'Steve', 
+  row:3, 
+  os:'Mac', 
+  hobbies:['Coding', 'Reading', 'Running'] 
+})
+```
 
 * Use find commands to get:
 
