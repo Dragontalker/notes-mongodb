@@ -36,7 +36,8 @@ db.students.insert({
   hobbies:['Video Gaming', 'Hiking', 'Reading'] 
 });
 
-# Output: WriteResult({ "nInserted" : 1 })
+# Output: 
+# WriteResult({ "nInserted" : 1 })
 
 db.students.insert({
   name: 'Linus', 
@@ -45,7 +46,8 @@ db.students.insert({
   hobbies:['Coding', 'Reading', 'Running'] 
 });
 
-# Ouput: WriteResult({ "nInserted" : 1 })
+# Ouput: 
+# WriteResult({ "nInserted" : 1 })
 
 db.students.insert({
   name: 'Steve', 
@@ -54,7 +56,8 @@ db.students.insert({
   hobbies:['Designing', 'Reading', 'Swimming'] 
 });
 
-# Output: WriteResult({ "nInserted" : 1 })
+# Output: 
+# WriteResult({ "nInserted" : 1 })
 ```
 
 ---
@@ -90,7 +93,7 @@ db.students.find({name: 'Richard'});
 ```bash
 db.students.find({rowNumber: 1, os: 'Mac'});
 
-# Output
+# Output:
 # { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming" ] }
 ```
 
@@ -102,6 +105,6 @@ db.students.find({rowNumber: 1, os: 'Mac'});
 ```bash
 db.students.find({'hobbies': {$in: ['Coding']}});
 
-# Output
+# Output:
 # { "_id" : ObjectId("604787b0164d739d58fbe94e"), "name" : "Linus", "rowNumber" : 2, "os" : "Ubuntu", "hobbies" : [ "Coding", "Reading", "Running" ] }
 ```
