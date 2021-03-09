@@ -79,7 +79,7 @@ db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 
 ---
 
-## 8. Updating.
+## 8. Updating using `$set`.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}})`
 
@@ -91,7 +91,7 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
 
 ---
 
-## 9. Updating more than one entries.
+## 9. Updating more than one entries using `{multi: true}`.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}}, {multi: true})`
 
