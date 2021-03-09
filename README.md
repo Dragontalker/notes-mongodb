@@ -34,7 +34,9 @@ db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["C
 
 ---
 
-## 4. Find all data in a Collection with `db.[COLLECTION_NAME].find()`.
+## 4. Find all data in a Collection.
+
+💡 __Syntax:__ `db.[COLLECTION_NAME].find()`
 
 * NOTE: the MongoDB _id was created automatically.
 
