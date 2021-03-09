@@ -2,6 +2,8 @@
 
 ## 1. Start up a new database by switching to it.
 
+💡 __Syntax:__ `use db_name` 
+
 ```bash
 use lessondb
 ```
@@ -64,6 +66,8 @@ db.places.find({"country": "Morocco"}).pretty();
 ```bash
 db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")});
 ```
+
+---
 
 ## 8. Updating
 
