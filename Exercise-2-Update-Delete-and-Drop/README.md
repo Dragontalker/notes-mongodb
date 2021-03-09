@@ -87,7 +87,7 @@ db.students.update({name:'Steve'}, {$set: {gavecandy:true}});
 
 #### Bonus Task 1. Insert five more documents with one command.
 
-💡 __Syntax:__ `db.students.insertMany([{DOCUMENT1}, {DOCUMENT2}, ...])
+💡 __Syntax:__ `db.students.insertMany([{DOCUMENT1}, {DOCUMENT2}, ...])`
 
 🏆 __Answer:__
 
@@ -116,3 +116,22 @@ db.students.insertMany([
 
 #### Bonus Task 2. Return all documents of students who have reading as a hobby or a mac operating system.
 
+💡 __Syntax:__ `db.students.find({$or: [{KEY: {"$in:":VALUE}}]})`
+
+🏆 __Answer:__
+
+```bash
+db.students.find(
+    {$or:[
+        {"hobbies":{"$in":["Reading"]}},
+        {"os":{"$in":["mac"]}}
+    ]}
+);
+
+# Output:
+# { "_id" : ObjectId("60478795164d739d58fbe94d"), "name" : "Richard", "rowNumber" : 1, "os" : "Red Hat Linux", "hobbies" : [ "Vide Gaming", "Hiking", "Reading" ], "gavecandy" : false }
+# { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming", "Extreme Basketweaving" ], "gavecandy" : 
+true }
+# { "_id" : ObjectId("6047bba838586d29b401ef0c"), "name" : "Alexa", "row" : 3, "os" : "Lin", "hobbies" : [ "Gaming", "Reading", "Gardening" ] }
+# { "_id" : ObjectId("6047bba838586d29b401ef0d"), "name" : "Gary", "row" : 4, "os" : "Mac", "hobbies" : [ "Walking", "Reading", "Mountain Climbing" ] }
+```
