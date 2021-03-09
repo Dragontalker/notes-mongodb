@@ -1,5 +1,7 @@
 # Exercise: Creating, Inserting and Finding in MongoDB
 
+---
+
 ## __Task 1:__ Use the command line to create a classroom database. 
 
 ### __Answer:__
@@ -24,11 +26,25 @@ use classroom
 ### __Answer:__
 ```bash
 db.students.insert({
-  name: 'Steve', 
-  row:3, 
-  os:'Mac', 
+  name: 'Richard', 
+  row:1, 
+  os:'Windows', 
+  hobbies:['Video Gaming', 'Hiking', 'Reading'] 
+});
+
+db.students.insert({
+  name: 'Linus', 
+  row:2, 
+  os:'Ubuntu', 
   hobbies:['Coding', 'Reading', 'Running'] 
-})
+});
+
+db.students.insert({
+  name: 'Steve', 
+  row:1, 
+  os:'Mac', 
+  hobbies:['Designing', 'Reading', 'Swimming'] 
+});
 ```
 
 ---
