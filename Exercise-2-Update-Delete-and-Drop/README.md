@@ -87,6 +87,31 @@ db.students.update({name:'Steve'}, {$set: {gavecandy:true}});
 
 #### Bonus Task 1. Insert five more documents with one command.
 
+💡 __Syntax:__ `db.students.insertMany([{DOCUMENT1}, {DOCUMENT2}, ...])
+
+🏆 __Answer:__
+
+```bash
+db.students.insertMany([
+  {name: 'Jane', row:1, os:'Mac', hobbies:['Coding', 'Sleeping', 'Karate'] },
+  {name: 'Mary', row:2, os:'Mac', hobbies:['Baseball', 'Basketball', 'Tai Chi'] },
+  {name: 'Alexa', row:3, os:'Lin', hobbies:['Gaming', 'Reading', 'Gardening'] },
+  {name: 'Gary', row:4, os:'Mac', hobbies:['Walking', 'Reading', 'Mountain Climbing'] },
+  {name: 'Ed', row:5, os:'Win', hobbies:['Coding', 'Karate', 'Scuba Diving'] }
+]);
+
+# Outputs:
+# {
+#         "acknowledged" : true,
+#         "insertedIds" : [
+#                 ObjectId("6047bba838586d29b401ef0a"),
+#                 ObjectId("6047bba838586d29b401ef0b"),
+#                 ObjectId("6047bba838586d29b401ef0c"),
+#                 ObjectId("6047bba838586d29b401ef0d"),
+#                 ObjectId("6047bba838586d29b401ef0e")
+#         ]
+# }
+```
 ---
 
 #### Bonus Task 2. Return all documents of students who have reading as a hobby or a mac operating system.
