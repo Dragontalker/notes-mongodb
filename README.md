@@ -5,12 +5,14 @@
 💡 __Syntax:__ `use db_name` 
 
 ```bash
-use lessondb
+use lessondb;
 ```
 
 ---
 
 ## 2. Show the current db by running db:
+
+💡 __Syntax:__ `db_name`
 
 ```bash
 db
@@ -19,6 +21,8 @@ db
 ---
 
 ## 3. Insert data into the lessondb database with this command.
+
+💡 __Syntax:__ `db.[COLLECTION_NAME].insert({key: value})`
 
 * NOTE: This will create the collection automatically.
 
