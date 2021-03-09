@@ -57,6 +57,13 @@ db.students.remove({name: 'Linus'});
 
 #### Task 4. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
 
+```bash
+db.students.update({}, {$set: {gavecandy:false}}, {multi:true});
+
+# Output:
+# WriteResult({ "nMatched" : 2, "nUpserted" : 0, "nModified" : 2 })
+```
+
 ---
 
 #### Task 5. All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
