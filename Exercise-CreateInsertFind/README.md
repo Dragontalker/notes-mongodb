@@ -36,6 +36,8 @@ db.students.insert({
   hobbies:['Video Gaming', 'Hiking', 'Reading'] 
 });
 
+// Output: WriteResult({ "nInserted" : 1 })
+
 db.students.insert({
   name: 'Linus', 
   rowNumber: 2, 
@@ -43,12 +45,16 @@ db.students.insert({
   hobbies:['Coding', 'Reading', 'Running'] 
 });
 
+// Ouput: WriteResult({ "nInserted" : 1 })
+
 db.students.insert({
   name: 'Steve', 
   rowNumber: 1, 
   os:'Mac', 
   hobbies:['Designing', 'Reading', 'Swimming'] 
 });
+
+// Output: WriteResult({ "nInserted" : 1 })
 ```
 
 ---
@@ -58,6 +64,10 @@ db.students.insert({
 ### 🏆 __Answer:__
 ```bash
 db.students.find({rowNumber: 1});
+
+// Output:
+// { "_id" : ObjectId("60478795164d739d58fbe94d"), "name" : "Richard", "rowNumber" : 1, "os" : "Windows", "hobbies" : [ "Vide Gaming", "Hiking", "Reading" ] }
+// { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming" ] }
 ```
 
 ---
@@ -67,6 +77,9 @@ db.students.find({rowNumber: 1});
 ### 🏆 __Answer:__
 ```bash
 db.students.find({name: 'Richard'});
+
+// Ouput:
+// { "_id" : ObjectId("60478795164d739d58fbe94d"), "name" : "Richard", "rowNumber" : 1, "os" : "Windows", "hobbies" : [ "Vide Gaming", "Hiking", "Reading" ] }
 ```
 
 ---
@@ -76,6 +89,9 @@ db.students.find({name: 'Richard'});
 ### 🏆 __Answer:__
 ```bash
 db.students.find({rowNumber: 1, os: 'Mac'});
+
+// Output
+// { "_id" : ObjectId("604787b4164d739d58fbe94f"), "name" : "Steve", "rowNumber" : 1, "os" : "Mac", "hobbies" : [ "Designing", "Reading", "Swimming" ] }
 ```
 
 ---
@@ -85,4 +101,7 @@ db.students.find({rowNumber: 1, os: 'Mac'});
 ### 🏆 __Answer:__
 ```bash
 db.students.find({'hobbies': {$in: ['Coding']}});
+
+// Output
+// { "_id" : ObjectId("604787b0164d739d58fbe94e"), "name" : "Linus", "rowNumber" : 2, "os" : "Ubuntu", "hobbies" : [ "Coding", "Reading", "Running" ] }
 ```
