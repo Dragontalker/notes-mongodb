@@ -9,13 +9,36 @@
 
 #### Task 0. Go back to your classroom database.
 
+🏆 __Answer:__ Type `mongo` in command-line to initialize MongoDB
+
+```bash
+use classroom;
+```
 ---
 
 #### Task 1. You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
 
+🏆 __Answer:__
+
+```bash
+db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basketweaving"}})
+
+# Output:
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+```
+
 ---
 
 #### Task 2. While practicing for your Extreme Basketweaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
+
+💡 __Syntax:__ `db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})`
+
+```bash
+db.students.update({name: 'Richard'}, {$set: {os: 'Red Hat Linux'}});
+
+# Output
+# WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+```
 
 ---
 
