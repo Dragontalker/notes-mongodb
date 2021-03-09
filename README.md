@@ -91,7 +91,7 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}});
 
 ---
 
-## 9. Updating more than one entries.
+###### 9. Updating more than one entries.
 
 💡 __Syntax:__ `db.[COLLECTION_NAME].update({KEY: VALUE}, {$set: {KEY: NEW_VALUE}}, {multi: true})`
 
@@ -100,3 +100,28 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {m
 ```
 
 ---
+
+###### 10. Adding new KEY pairs using `$set`.
+
+* Recall from the earlier demo the structure of our document:
+
+```bash
+db.places.insert({"continent": "Africa", "country": "Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+```
+
+* What do you think will happen when you run the following command, even though there is not a `capital` field in the document?
+
+```bash
+db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+```
+
+* `$set` will create the field `capital`.
+
+* The newly created field can now be updated with the same command:
+
+```bash
+db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
+```
+
+----
+
